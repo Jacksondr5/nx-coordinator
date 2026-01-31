@@ -12,6 +12,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Required for build validation (not used at runtime)
+      NEXT_PUBLIC_CONVEX_URL: https://placeholder.convex.cloud
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
